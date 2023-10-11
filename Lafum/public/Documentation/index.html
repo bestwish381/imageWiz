@@ -1,0 +1,918 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Laravel - Advanced Files & Users Management | Documentation</title>
+        <meta name="description" content="Shipping Restrictions magento 2 extension">
+        <meta name="author" content="CynoInfotech">
+		<link rel="shortcut icon" type="image/png" href="assets/images/ci-main-16.png"/>		
+		<link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">		
+        <link rel="stylesheet" href="assets/css/bootstrap.css" media="all">
+        <link rel="stylesheet" href="assets/css/perfect-scrollbar.css" media="all">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all">
+        <link rel="stylesheet" href="assets/css/style.css" media="all">        
+        <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' type='text/css'>        
+        <script type="text/javascript" src="assets/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/perfect-scrollbar.js"></script>
+        <script>
+            jQuery(document).ready(function ($) {
+                "use strict";
+                $('#ci_nav').perfectScrollbar();
+            });
+        </script>        
+    </head>
+	
+    <body class="documenter-project-crocshop" data-spy="scroll" data-target="#ci_nav_cover">
+        <div class="content-inner">            
+            <div id="ci_sidebar" class="active_menu">
+                <div id="ci_nav_cover">
+                    <ul id="ci_nav" class="nav" data-offset-top="125">					
+						<li class="tab-heading"><span class="tab-txt">Getting Started</span></li>
+                        <li class="active">
+							<a title="Introduction" class="scroll-a" href="#introduction">
+								<i class="fa fa-info"></i><span class="tab-txt">Introduction</span>
+							</a>
+						</li>
+						<li>
+							<a title="Requirements" class="scroll-a" href="#requirements">
+								<i class="fa fa-server"></i><span class="tab-txt">Server Requirements</span>
+							</a>
+						</li>
+						<li>
+							<a title="installation" class="scroll-a" href="#installation">
+								<i class="fa fa-cloud-upload"></i><span class="tab-txt">Installation</span>
+							</a>
+						</li>
+						
+                        <li class="tab-heading"><span class="tab-txt">Sign In/Sign Up</span></li>
+						<li>
+							<a title="Sign In" class="scroll-a" href="#login">
+								<i class="fa fa-sign-in"></i><span class="tab-txt">Sign In</span>
+							</a>
+                        </li>
+                        <li>
+							<a title="Sign Up" class="scroll-a" href="#SignUp">
+								<i class="fa fa-user-plus"></i><span class="tab-txt">Sign Up</span>
+							</a>
+                        </li>
+                        <li>
+							<a title="Forgot Password" class="scroll-a" href="#ForgotPassword">
+								<i class="fa fa-window-restore"></i><span class="tab-txt">Forgot Password</span>
+							</a>
+                        </li>
+                        
+                        <li class="tab-heading"><span class="tab-txt">Files Manager</span></li>
+                        <li>
+							<a title="Files Manager" class="scroll-a" href="#filesmanager">
+								<i class="fa fa-files-o"></i><span class="tab-txt">Files Manager</span>
+							</a>
+                        </li>
+                        
+                        <li class="tab-heading"><span class="tab-txt">Dashboard Panel</span></li>
+                        <li>
+							<a title="Dashboard" class="scroll-a" href="#dashboard">
+								<i class="fa fa-dashboard"></i><span class="tab-txt">Dashboard</span>
+							</a>
+                        </li>
+                        <li>
+							<a title="Files" class="scroll-a" href="#Files">
+								<i class="fa fa-book"></i><span class="tab-txt">Files</span>
+							</a>
+						</li>
+                        <li>
+							<a title="Upload" class="scroll-a" href="#Upload">
+								<i class="fa fa-upload"></i><span class="tab-txt">Upload</span>
+							</a>
+						</li>
+
+                        <li>
+							<a title="File Folder" class="scroll-a" href="#FileFolder">
+								<i class="fa fa-folder"></i><span class="tab-txt">File Folder</span>
+							</a>
+						</li>
+
+                        <li>
+							<a title="File Extension" class="scroll-a" href="#FileExtension">
+								<i class="fa fa-tags"></i><span class="tab-txt">File Extension</span>
+							</a>
+						</li>
+						
+						<li>
+							<a title="Users" class="scroll-a" href="#users">
+								<i class="fa fa-users"></i><span class="tab-txt">Users</span>
+							</a>
+						</li>
+						<li>
+							<a title="Roles" class="scroll-a" href="#roles">
+								<i class="fa fa-registered"></i><span class="tab-txt">Roles</span>
+							</a>
+						</li>
+                        <li>
+							<a title="Activity Logs" class="scroll-a" href="#ActivityLogs">
+								<i class="fa fa-clock-o"></i><span class="tab-txt">Activity Logs</span>
+							</a>
+						</li>
+						
+                        <li>
+							<a title="Settings" class="scroll-a" href="#settings">
+								<i class="fa fa-cogs"></i><span class="tab-txt">Settings</span>
+							</a>
+						</li>
+                        
+                        <li>
+							<a title="Translations" class="scroll-a" href="#Translations">
+								<i class="fa fa-language"></i><span class="tab-txt">Translations</span>
+							</a>
+						</li>
+						
+                        <li class="tab-heading"><span class="tab-txt">Change Logs</span></li>
+                        <li>
+							<a title="Change Logs" class="scroll-a" href="#ChangeLogs">
+								<i class="fa fa-bell"></i><span class="tab-txt">Change Logs</span>
+							</a>
+						</li>
+                        <li class="tab-heading"><span class="tab-txt">Demo & Support</span></li>
+						<li>
+							<a title="Demo" class="scroll-a" href="#demo">
+								<i class="fa fa-smile-o"></i><span class="tab-txt">Demo</span>
+							</a>
+						</li>
+						
+						<li>
+							<a title="Support" class="scroll-a" href="#support">
+								<i class="fa fa-support"></i><span class="tab-txt">Support</span>
+							</a>
+						</li>
+						
+						
+					</ul>
+                </div>
+            </div>
+			
+			<!-----------------------------Main content ----------------------------->
+			
+            <div id="ci-content-main" class="active_content">
+			
+                <div id="top-header" class="top-header active-top">
+                    <div class="header-logo-block">
+                        <a href="https://www.cynoinfotech.com/" id="ci_logo">
+                            <img src="assets/images/logo-for-ci.png" alt="CynoInfotech" width="70%" />
+                        </a>
+                    </div>
+                    <div class="header-buttons-block">
+                        <div class="header-buttons-block-inner">
+                            <div class="header-buttons-block-inner-content">
+                                <nav class="navbar navbar-default" role="navigation">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                                data-target="#top-header-btns">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>									
+                                    <div class="collapse navbar-collapse" id="top-header-btns">
+                                        <ul class="nav navbar-nav">	                                       
+                                           <li><a target="_blank" class="header-btn" href="https://www.cynoinfotech.com/contact-us/">Contact Us</a></li>
+                                        </ul>
+                                    </div>									
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+				
+                <div id="ci_content">
+                    
+                    <!-- Introduction -->
+                    <section id="introduction" class="st-section">
+                        <div style="margin-top:38px;" class="panel panel-part">
+						    <div class="panel-body">  
+                                <a href="images/laravel-advanced-files-users-management-banner.jpg" class="fancybox" data-fancybox="gallery" data-caption="Introduction" >
+                                    <img alt="Shipping Restrictions magento 2 extension" src="images/laravel-advanced-files-users-management-banner.jpg" class="image_with_padding">
+                                </a>
+									
+                                <ul>
+                                    <li>By: CynoInfotech Team</li>
+									<li>Platform: Laravel</li>									
+                                    <li>Email: <a href="mailto:info@cynoinfotech.com">info@cynoinfotech.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+					
+                    <!-- Server Requirements -->
+                    <section id="requirements">
+                        <div class="panel panel-part">
+							<h3 class="panel-title">Server Requirements</h3>
+                           
+                            <div class="panel-body">
+                                <ul>
+                                    <li>PHP 7.4+</li>
+									<li>MySQL 5.6+</li>									
+                                    <li>Intl PHP Extension</li>
+                                    <li>OpenSSL PHP Extension</li>
+                                    <li>PDO PHP Extension</li>
+                                    <li>Mbstring PHP Extension</li>
+                                    <li>Tokenizer PHP Extension</li>
+                                    <li>XML PHP Extension</li>
+                                    <li>Ctype PHP Extension</li>
+                                    <li>JSON PHP Extension</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+					
+                    <!-- Installation -->
+                    <section id="installation">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Installing Laravel - Advanced Files & Users Management</h3>
+                            <div class="panel-body">
+                                <p><strong>Step 1: Extract and Upload</strong></p>
+                                <p>Unzip the downloaded archive package. Rename the <code>Lafum</code> directory to your desired directory name and upload the directory to your web server through FTP or Control Panel.</p>
+                                
+                                <p><strong>Step 2: Creating Database</strong></p>
+                                <p>Create a database for Lafum through your server control panel. If your server has phpMyAdmin, then you can also create a database using phpMyAdmin.</p> 
+                                
+                                <p><strong>Step 3: Run Installation Wizard</strong></p>
+                                <p>Go to your website address, then you'll see an installation wizard.</p>
+                                <div class="alert alert-danger" role="alert">
+                                  <b>Note:- You should configure your web server's document / web root to be the <code>public</code> directory.</b>
+                                </div>    
+                                
+                                <p><b><u>Welcome</u></b></p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/I/Welcome.png" class="fancybox" data-fancybox="gallery" data-caption="Installation- Welcome" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/I/Welcome.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                
+                                <p><b><u>Requirements</u></b></p>
+                                <p>Requirements page checks if your server meets the requirements and has the correct directory permissions to Application.</p>
+
+                                <p>Directories within the storage and the bootstrap/cache directories should be writable by your web server or Application will not run.</p>
+                            
+                                <div class="screen-shot-center">
+                                    <a href="images/I/Rquirements.png" class="fancybox" data-fancybox="gallery" data-caption="Installation- Requirements" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/I/Rquirements.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b><u>Configuration</u></b></p>
+                                <p>You need to fill the database connection details, admin user details, and site details, then click the Install button to install Application.</p>
+                                
+								<div class="screen-shot-center">
+                                    <a href="images/I/Configuration.png" class="fancybox" data-fancybox="gallery" data-caption="Installation- Configuration" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/I/Configuration.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b><u> Complete</u></b></p>
+                                <p>You'll see a success message after successfully installing Application.</p>
+                                
+								<div class="screen-shot-center">
+                                    <a href="images/I/Complete.png" class="fancybox" data-fancybox="gallery" data-caption="Installation- Complete" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/I/Complete.png" class="image_with_padding">
+                                    </a>
+								</div>
+								
+                            </div>
+                        </div>
+                    </section>
+					
+                    <!-- Login -->
+                    <section id="login">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Sign In</h3>
+                            <div class="panel-body">
+                                <div class="screen-shot-center">
+                                    <a href="images/Sign In.png" class="fancybox" data-fancybox="gallery" data-caption="Sign In" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Sign In.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p>Now you have to enter your email and password that you've provided during the installation process. After pressing the Sign In button, then you'll redirect to the Files Manager.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- SignUp -->
+                    <section id="SignUp">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Sign Up</h3>
+                            <div class="panel-body">
+                                <div class="screen-shot-center">
+                                    <a href="images/Sign Up.png" class="fancybox" data-fancybox="gallery" data-caption="Sign Up" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Sign Up.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p>Users can create a new account filling this form.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Forgot Password -->
+                    <section id="ForgotPassword">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Forgot Password</h3>
+                            <div class="panel-body">
+                                <div class="screen-shot-center">
+                                    <a href="images/Forgot Password.png" class="fancybox" data-fancybox="gallery" data-caption="Forgot Password" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Forgot Password.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p>Enter your account email to receive a link for reset your password.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- FILES MANAGER -->
+                    <section id="filesmanager">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Files Manager</h3>
+                            <div class="panel-body">
+                                <p>After successfully Signed In user redirect to file manager.</p>
+                                <p>Here you can upload new files and manage already upload files.</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Manager.jpg" class="fancybox" data-fancybox="gallery" data-caption="Files Manager" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Files Manager.jpg" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p>Users can move files from one folder to another folder, share files, download multiple files zip, download folder zip.</p>
+                                <p>Users can create a new folder if the user has permission to create a folder.</p>
+                                <p>When user click Dashboard menu in the header it will redirect to the Dashboard panel</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Dashboard -->
+                    <section id="dashboard">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Dashboard</h3>
+                            <div class="panel-body">
+                                <p>From the dashboard you'll see an quick overview of your site</p>
+                                <p>you'll see Files Statistics, Users Statistics, Most Downloaded Files</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Dashboard.png" class="fancybox" data-fancybox="gallery" data-caption="Dashboard" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Dashboard.png" class="image_with_padding">
+                                    </a>
+								</div>
+                            </div>
+                        </div>
+                    </section>
+					
+                    <!-- Files -->
+                    <section id="Files">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Files</h3>
+                            <div class="panel-body">
+                                <p>All upload Files are listed under the Files menu.</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Files.png" class="fancybox" data-fancybox="gallery" data-caption="Files" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Files.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b>Edit File Name and Description:-</b></p>
+                                <p>User can click on the row to edit File details</p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Edit-General.jpg" class="fancybox" data-fancybox="gallery" data-caption="Files Edit-General" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Files Edit-General.jpg" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p>In order to Preview a File click the view button in a row.</p>
+                                
+                                <p><strong>Image:-</strong></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Preview-Images.png" class="fancybox" data-fancybox="gallery" data-caption="Files- Image Preview" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Files Preview-Images.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><strong>Pdf:-</strong></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Preview-PDF.png" class="fancybox" data-fancybox="gallery" data-caption="Files- PDF Preview" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Files Preview-PDF.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><strong>Video:-</strong></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Preview-Video.png" class="fancybox" data-fancybox="gallery" data-caption="Files- Video Preview" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Files Preview-Video.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p>View File Description </p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Preview-Description.png" class="fancybox" data-fancybox="gallery" data-caption="Files Description" >
+                                        <img alt="Shipping Restrictions magento 2 extension" src="images/Files Preview-Description.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p><strong>Share Files:-</strong></p>
+                                <p>Select one or multiple files using the checkbox  and click on  <b>Share</b> button to  Generate a Share link.</p>
+                                
+                                <p><b><u> Step 1</u></b></p>
+                                <p>Enter password if you want to generate a link to password-protected or leave it blank </p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Share-1.png" class="fancybox" data-fancybox="gallery" data-caption="Files- Share" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Files Share-1.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b><u> Step 2</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Share-2.png" class="fancybox" data-fancybox="gallery" data-caption="Files Share" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Files Share-2.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p>you can share this generated link with user/guest and you will send email of link to the users using below form </p>
+                                
+                                
+                                <p><b>When user/guest click on generated link, the user/guest can view sharing file list</b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Share Link.png" class="fancybox" data-fancybox="gallery" data-caption="Files Share Link" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Files Share Link.png" class="image_with_padding">
+                                    </a>
+								</div>
+                            </div>
+                        </div>
+                    </section>
+					
+					
+                    <!-- Upload -->
+                    <section id="Upload">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Upload New File</h3>
+                            <div class="panel-body">
+                                <p>You can upload new files from the Upload menu.</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Upload.png" class="fancybox" data-fancybox="gallery" data-caption="Upload New File" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Files Upload.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p>You can drag & drop files in the area to upload as many files as you want.</p>
+                                <p>You can select the upload drive from folder list.</p>
+                                <p>You can upload file with Allowed extensions and size up to Your maximum file size</p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Create Folder.png" class="fancybox" data-fancybox="gallery" data-caption="Create New File Folder" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Files Create Folder.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <p>Users can create a new folder if the user has permission to create a folder.</p>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </section>
+					
+                    <!-- File Folder -->
+                    <section id="FileFolder">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">File Folder</h3>
+                            <div class="panel-body">
+                                <p>You can manage and create files upload folders from the File Folder menu.</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Folder.png" class="fancybox" data-fancybox="gallery" data-caption="Files Folder" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Files Folder.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><strong>Create New File Folder:-</strong></p>
+                                
+                                <ul>
+                                    <li><b>Name:</b> The name of the folder.</li>
+                                    <li><b>Assign To All:</b> Assign this new folder to all users. This setting is overridden by user file setting</li>
+                                    <li><b>Status:</b> Status </li>
+                                    <li><b>Public Download:</b> Enable download files without login inside this folder from share links. by default you need to login for download files</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- File Extension -->
+                    <section id="FileExtension">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">File Extension</h3>
+                            <div class="panel-body">
+                                <p>You can manage and add new allowed files extension from the File extension menu.</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Files Extension.png" class="fancybox" data-fancybox="gallery" data-caption="Files Extension" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Files Extension.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><strong>Create New File Extension:-</strong></p>
+                                
+                                <ul>
+                                    <li><b>Name:</b> The name of the folder.</li>
+                                    <li><b>Assign To All:</b> Assign this new extension to all users. This setting is overridden by user file setting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+					
+                    <!-- Users -->
+                    <section id="users">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Users</h3>
+                            <div class="panel-body">
+                                <p>All available users are listed under the Users menu.</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Users.png" class="fancybox" data-fancybox="gallery" data-caption="Users" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Users.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b>Create User:-</b></p>
+                                <p>Navigate to <b>Users  > Create User</b> to create a new user</p>
+                                
+                                <p><b><u>General</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Users Create-General.png" class="fancybox" data-fancybox="gallery" data-caption="Users Create-General" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Users Create-General.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                
+                                <p><b><u>Permissions</u></b></p>
+                                <p>You can manage what a user can do in your system by creating roles or choosing permissions for the specific user. By default, user permissions are inherited from the roles</p>
+                                <p>Role permissions and user-specific permissions are merged together to determine the user's ability. When permissions are merged together user-specific permissions will always have more priority than role permissions. So, if you want to give a user all permissions from a role except one, then choose the role for the user, and Deny the specific permission.</p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Users Create-Permissions.png" class="fancybox" data-fancybox="gallery" data-caption="Users Create-Permissions" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Users Create-Permissions.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b><u>Files Settings</u></b></p>
+                                <p></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Users Create-Files Setting.png" class="fancybox" data-fancybox="gallery" data-caption="Users Create-Files Setting" >
+                                        <img  alt="Laravel - Advanced Files & Users Management" src="images/Users Create-Files Setting.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                <ul>
+                                    <li><b>Maximum File Size (In MB):</b> Maximum file size for upload new file. ex :10 </li>
+                                    <li><b>File Extension:</b> Select file types which the user can upload  </li>
+                                    <li><b>File Folder:</b> Select folder where user can upload files. sub-folder automatically assign when you select the main folder </li>
+                                    <li><b>Note:</b> Users can view all files inside the assigned folders. admin can manage the auto-assign folder's files for the setting. also, User can delete files of another user inside the assign folder's. admin can manage the delete assign folder's files for the setting.</li>
+                                </ul>
+                                
+                                <p><b>Edit User:-</b></p>
+                                <p>User can click on the row to edit user recorded</p>
+                                
+                            </div>
+                        </div>
+                    </section>
+					
+					<!-- Roles -->
+                    <section id="roles">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Roles</h3>
+                            <div class="panel-body">
+                                <p>All available users roles are listed under the Roles menu.</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Roles.png" class="fancybox" data-fancybox="gallery" data-caption="Roles" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Roles.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b>Create Role:-</b></p>
+                                <p>Navigate to <b>Roles  > Create Role </b> to create a new role</p>
+                                
+                                <p><b><u>General</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Roles Create-General.png" class="fancybox" data-fancybox="gallery" data-caption="Roles Create-General" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Roles Create-General.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b><u>Permissions</u></b></p>
+                                <p>Role-specific permissions are a good way to give permissions to multiple users at once. You can override role permissions from the user-specific permissions for any user.</p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Roles Create-Permissions.png" class="fancybox" data-fancybox="gallery" data-caption="Roles Create-Permissions" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Roles Create-Permissions.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b>Edit Role:-</b></p>
+                                <p>User can click on the row to edit role recorded</p>
+                            </div>
+                        </div>
+                    </section>
+					
+					<!-- Activity Logs -->
+                    <section id="ActivityLogs">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Activity Logs</h3>
+                            <div class="panel-body">
+                                <p>You can check users activity logs like which action perform in application by users</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Activity Logs.png" class="fancybox" data-fancybox="gallery" data-caption="Activity Logs.png" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Activity Logs.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                            </div>
+                        </div>
+                    </section>
+					
+					<!-- Settings -->
+                    <section id="settings">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Settings </h3>
+                            <div class="panel-body">
+                                
+                                <p><b><u>General</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings General.png" class="fancybox" data-fancybox="gallery" data-caption="Settings General" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings General.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <ul>
+                                    <li><b>Site Name:</b> Site name.</li>
+                                    <li><b>Site Logo:</b> Site Logo.</li>
+                                    <li><b>Site Email:</b> Site Email.</li>
+                                    <li><b>Supported Locales:</b> Supported locales of your site.</li>
+                                    <li><b>Default Locale:</b> The default locale of your site.</li>
+                                    <li><b>Default Timezone:</b> The default timezone of your site .</li>
+                                </ul>
+                                
+                                <p><b><u>Theme</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings Theme.png" class="fancybox" data-fancybox="gallery" data-caption="Settings Theme" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings Theme.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b><u>User</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings User.png" class="fancybox" data-fancybox="gallery" data-caption="Settings User" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings User.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <ul>
+                                    <li><b>New User Role:</b> Role of the user when they register.</li>
+                                    <li><b>Enable Registrations:</b> You can enable/disabled user Registrations.</li>
+                                    <li><b>Auto Approve New Members?:</b> If the checkbox is checked user will automatically be approved after Registration. if not then the admin user needs to approve the user.</li>
+                                    <li><b>Welcome Email:</b> Send an welcome email to the user when they register.</li>
+                                    <li><b>Auto assign folder's files:</b> User can view all files inside the assign folder's</li>
+                                    <li><b>Delete assign folder's files:</b> User can delete files of another user inside the assign folder's</li>
+                                </ul>
+                                
+                                <p><b><u>Files</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings Files.png" class="fancybox" data-fancybox="gallery" data-caption="Settings Files" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings Files.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <ul>
+                                    <li><b>Maximum File Size (In MB) :</b> Default Maximum file size for upload fiele .</li>
+                                    <li><b>Enable Files Download:</b> Enable files download button. If yes then users can download the files.</li>
+                                    <li><b>Enable File Preview Button:</b> Display preview button on file listing</li>
+                                    <li><b>Enable Files Move Actions:</b> User can move the files from one folder to another folder.</li>
+                                    <li><b>Enable Files Share Actions:</b> User can share the files with other.</li>
+                                </ul>
+                                
+                                <p><b><u>E-mail</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings e-mail.png" class="fancybox" data-fancybox="gallery" data-caption="Settings e-mail" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings e-mail.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <ul>
+                                    <li><b>Mail From Address:</b> This mail from address is used for all kind of emails.</li>
+                                    <li><b>Mail From Name:</b> This mail from name is used for all kind of emails.</li>
+                                    <li><b>Mail Host:</b> The host of your SMTP server.</li>
+                                    <li><b>Mail Port:</b> The Port of your SMTP server.</li>
+                                    <li><b>Mail Username:</b> The Username of your SMTP server.</li>
+                                    <li><b>Mail Password:</b> The Password of your SMTP server.</li>
+                                    
+                                </ul>
+                                
+                                <p><b><u>Custom JS/CSS</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings Custom js-css.png" class="fancybox" data-fancybox="gallery" data-caption="Settings Custom js/css" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings Custom js-css.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <ul>
+                                    <li><b>Google Analytics Code:</b> Enter Google Analytics Code.</li>
+                                    <li><b>Custom JS:</b> Enter Custom Js here. This custom JS added to the Footer.</li>
+                                    <li><b>Custom CSS:</b>Enter Custom CSS here. This custom CSS added to the header.</li>
+                                </ul>
+                                
+                                <p><b><u>Social Logins</u></b></p>
+                                <p><b><u>Facebook</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings Facebook.png" class="fancybox" data-fancybox="gallery" data-caption="Settings Facebook" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings Facebook.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <p><b><u>Google</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings Google.png" class="fancybox" data-fancybox="gallery" data-caption="Settings Google" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings Google.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                
+                                <p><b><u>Advertisement Settings</u></b></p>
+                                <p><b><u>Ad Blocks</u></b></p>
+                                <div class="screen-shot-center">
+                                    <a href="images/Settings Ad Blocks.png" class="fancybox" data-fancybox="gallery" data-caption="Settings Ad Blocks" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Settings Ad Blocks.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <ul>
+                                    <li><b>Enable:</b> Enable Ad Block 1.</li>
+                                    <li><b>Ad Block 1:</b> Enter Advertisement code.</li>
+                                    <li><b>Enable:</b> Enable Ad Block 2.</li>
+                                    <li><b>Ad Block 2:</b> Enter Advertisement code.</li>
+                                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </section>
+					
+					<!-- Translations -->
+                    <section id="Translations">
+                        <div class="panel panel-part">
+							
+                            <h3 class="panel-title">Translations </h3>
+                            <div class="panel-body">
+                                
+                                <p>You can translate your application's strings from the built-in translation editor for all supported locales. You can also use the translation editor for editing the default strings.</p>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Translations.png" class="fancybox" data-fancybox="gallery" data-caption="Translations.png" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Translations.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                <div class="screen-shot-center">
+                                    <a href="images/Translations Edit.png" class="fancybox" data-fancybox="gallery" data-caption="Translations Edit" >
+                                        <img alt="Laravel - Advanced Files & Users Management" src="images/Translations Edit.png" class="image_with_padding">
+                                    </a>
+								</div>
+                                
+                                
+                            </div>
+                        </div>
+                    </section>
+					
+					
+					
+					
+					<section id="ChangeLogs">
+                        <div class="panel panel-part">
+							<h3 class="panel-title">Change Logs</h3>
+                           
+                            <div class="panel-body">
+                                <p><b>Version:</b> 2.0.1</b></p>
+                                <ul> 
+									
+									<li><b>New:</b> Social Logins with Facebook and Google.</li>
+									<li><b>New:</b> User Profile Photo.</li>
+									<li><b>New:</b> New security option for enabling  download files without login inside this folder</li>
+									<li><b>New:</b> Add New Setting for Theme</li>
+									<li><b>New:</b> Add New Setting for Site Logo.</li>
+									<li><b>New:</b> Add New Setting for Enable File Preview button</li>
+                                    <li><b>New:</b> Add New Setting for Enable Files Download</li>
+                                    <li><b>New:</b> Add New Setting for Enable Files Move Actions</li>
+                                    <li><b>New:</b> Add New Setting for Enable Files Share  Actions</li>
+									
+									<li><b>Fixed:</b> The page title is not change.</li>
+									<li><b>Fixed:</b> File manager page upload permission issue.</li>
+									<li><b>Fixed:</b> Files are not renamed when downloading folder.</li>
+									<li><b>Fixed:</b> The responsive issue in mobile with more action.</li>
+									
+								</ul>
+                                <p><b>Version:</b> 2.0.0</b></p>
+                                <ul> 
+									
+									<li><b>New:</b> Share folder and inside files with another user.</li>
+									<li><b>New:</b> Setting for Auto-assign folders files and Delete assign folder's files.</li>
+									<li><b>New:</b> Move files one folder to another folder</li>
+									<li><b>New:</b> Download multiple files zip and Download folder zip</li>
+									<li><b>New:</b> Users can create a new folder from the file manager.</li>
+									<li><b>New:</b> Display upload path above the upload box</li>
+                                    <li><b>New:</b> Download Zip of all files from share links</li>
+                                    <li><b>New:</b> Tree view for manage folder</li>
+									<li><b>Improved:</b> Share file functionality.</li>
+									<li><b>Fixed:</b> Translations are not saving issues.</li>
+									<li><b>Fixed:</b> Activity log issues.</li>
+									<li><b>Fixed:</b> minor bug fixed.</li>
+									
+								</ul>
+                                <p><b>Version:</b> 1.0.1</b></p>
+                                <ul> 
+									<li><b>New:</b> Add files manager panel</li>
+									<li><b>New:</b> Edit file name and description</li>
+									<li><b>New:</b> Add option in settings for custom css and js.</li>
+									<li><b>New:</b> Add option in settings for Google Analytics Code.</li>
+									<li><b>New:</b> Add option in settings for Ad Blocks.</li>
+									<li><b>Improved:</b> In upload New file layout.</li>
+									<li><b>Fixed:</b> minor bug fixed.</li>
+									
+								</ul>
+                                <p><b>Version:</b> 1.0.0</b></p>
+                                <ul> 
+									<li>init</li>
+								</ul>								
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="demo">
+                        <div class="panel panel-part">
+							<h3 class="panel-title">Demo</h3>
+                           
+                            <div class="panel-body">
+                                 <ul> 
+									<li><b>Demo Link:</b> <a href="http://lavdemo.cssfloat.net/Lafum/public/" rel="nofollow">http://lavdemo.cssfloat.net/Lafum/public/</a></li>
+									
+									<li><b>Admin Email:</b> admin@gmail.com</li>
+									<li><b>Admin Password:</b> admin123</li>
+									<li><b>User Email: </b> demo@gmail.com</li>
+									<li><b>Password:</b> demo123</li>
+                                </ul>								
+                            </div>
+                        </div>
+                    </section>
+					
+					<section id="support">
+                        <div class="panel panel-part">
+							<h3 class="panel-title">support</h3>
+                           
+                            <div class="panel-body">
+                                 <ul>                                    
+                                    <li>
+										<a href="http://www.cynoinfotech.com/support/" target="_blank">
+										http://www.cynoinfotech.com/support/
+										</a>
+									</li>																							
+                                </ul>								
+                            </div>
+                        </div>
+                    </section>		
+					
+                </div>
+            </div>
+        </div>
+		
+		<script>
+            $(document).ready(function () {
+                $('#sidebar-btn').click(function () {
+                    $('#ci_sidebar').toggleClass('active_menu');
+                    $('#ci-content-main').toggleClass('active_content');
+                    $('#sidebar-btn').toggleClass('act-sidebar');
+                    $('#content-header').toggleClass('active-header');
+                    $('#top-header').toggleClass('active-top');
+                });
+                $('#tog-tab').click(function () {
+                    $('#tog-content').toggleClass('tog-content');
+                });
+            });
+        </script>		
+		<!-- Ninja Slider -->
+		<script src="assets/js/jquery.fancybox.min.js"></script>	
+    </body>
+</html>

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "cyberpunkcodes/laravel-menu-helper": "^1.0"
+    }
+}

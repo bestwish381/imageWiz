@@ -1,0 +1,28 @@
+<?php
+session_start();
+error_reporting(1);
+include('includes/config.php');
+if(strlen($_SESSION['userlogin'])==0):
+header('location:index.php');
+else:
+?>
+<?php 
+
+$sql ="SELECT FullName,PhoneNumber,PostingDate,id,Is_Read from tblcontactdata";
+//$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0):
+foreach($results as $result):
+       ?>
+
+<?php
+$sql = "DELETE FROM tblcontactdata WHERE id='" . $_GET["cid"] . "'";
+if (mysql_query($sql)) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . mysql_error($conn);
+}
+mysql_close($conn);
+?>
